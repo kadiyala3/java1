@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('rajesh'){
+            steps{
+                git branch:'main',
+                url:'https://github.com/kadiyala3/java1.git'
+            }
+        }
+        stage('Hello world') {
+            steps {
+               sh 'javac Demo.java'
+               sh 'java Demo.java'
+            }
+        }
+    }
+}
